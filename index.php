@@ -30,10 +30,11 @@ class Movie{
     public function getLanguage($language){
 
         $this->selectedLanguage = $language;
+        return $this->selectLanguage();
 
     }
 
-    public function selectLanguage(){
+    private function selectLanguage(){
         return 'selected language : '. $this->selectedLanguage;
     }
 
@@ -63,7 +64,7 @@ $ToyStory = new Movie ('Toy Story','John Lasseter','computer-animated comedy','8
 <body>
 
    <div>
-      <?= $Troy->title . $ToyStory->title . '</br>' . $Troy->getLanguage('french') . '</br>' . $Troy->selectLanguage()
+      <?= $Troy->title . $ToyStory->title . '</br>' . $Troy->getLanguage('french') 
 
       ?>
 
